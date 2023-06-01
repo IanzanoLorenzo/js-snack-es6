@@ -38,6 +38,7 @@ const studenti = [
     }
 ]
 
+//creato array con i nomi degli studenti in maiuscolo
 let newClass = studenti.map((item) => {
     let targhetta = item.nome.toUpperCase()
     return targhetta;
@@ -45,18 +46,24 @@ let newClass = studenti.map((item) => {
 
 console.log(newClass)
 
+//creato array con gli studenti con voti superiori a 70
 let over70 = studenti.filter((item) =>{
     if(item.voti > 70){
         return true
     }
 })
 
-console.log(over70)
+for(let i in over70){
+    console.log(over70[i])
+}
 
+//creato array con gli studenti con voti superiori a 70
 let over70Over120 = studenti.filter((item) =>{
-    if(item.voti > 70 && item.id > 120){
+    if(item.voti > 70 &&item.id > 120){
         return true
     }
 })
 
-console.log(over70Over120)
+for(let i in over70Over120){
+    console.log(over70Over120[i])
+}
